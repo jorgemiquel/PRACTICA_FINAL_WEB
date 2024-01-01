@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+}
+
+body {
     background-color: black;
 }
 
@@ -15,17 +18,9 @@
 
 
 .bg-dark {
-  --bs-bg-opacity: 1;
+  --bs-bg-opacity: 0;
 }
 
 .navbar-expand-sm .navbar-collapse {
   justify-content: right;
-}
-
-.logo {
-    width: 50%;
-}
-
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-    flex-wrap: nowrap;
 }
