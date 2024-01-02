@@ -10,13 +10,10 @@ body {
   background-color: black;
 }
 
-
 .navbar-brand {
   font-size: 2em;
   padding-left: 5%;
 }
-
-
 
 .bg-dark {
   --bs-bg-opacity: 0;
@@ -26,21 +23,16 @@ body {
   justify-content: right;
 }
 
-
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+#encuentranos {
+  display: flex;
+  justify-content: center;
 }
+
+#encuentranos img {
+  width: 30%;
+  padding: 20px 0;
+}
+
 
 #anuncio {
   display: flex;
@@ -74,6 +66,21 @@ body {
     -webkit-filter: blur(1.4px);
     -webkit-transform: translate(-2px, 2px);
   }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 footer {
