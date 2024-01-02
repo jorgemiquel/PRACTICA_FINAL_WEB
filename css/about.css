@@ -10,3 +10,86 @@
 body {
     background-color: black;
 }
+
+
+
+#aboutus {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#aboutus > figure {
+    width: 29%;
+}
+
+#aboutus > div > h3 {
+    color: white;
+}
+
+#aboutus > div > p {
+    display: flex;
+    color: white;
+    font-size: 2em;
+}
+
+#info_general > div > p {
+    color: white;
+}
+
+#info_general > div > h3 {
+    color: white;
+}
+
+#info_general > div > img {
+    width: 29vw;
+    height: 66vh;
+    size: 40vh;
+}
+
+#thereturn {
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+}
+
+#history {
+    color: white;
+
+}
+
+#thereturn > div {
+    color: white;
+}
+
+#thereturn > div > h3 {
+    color: white;
+}
+
+.parallax {
+    height: 50vh;
+    background-image: url(../img/fachada.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* FOOTER */
+footer {
+    padding-top: 5%;
+  }
+  
+  .logo-footer {
+    padding-left: 5%;
+    height: 60px;
+      transform: translatey(0px);
+      animation: float 6s ease-in-out infinite;
+  }
+  
+  footer div {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
