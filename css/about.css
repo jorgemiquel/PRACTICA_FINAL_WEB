@@ -29,11 +29,67 @@ body {
 
 
 
+/* QUIENES SOMOS */
+.aboutus > h2 {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+div#imagen {
+    width: 700px;
+    height: 700px;
+    background-size: cover;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/63b8648fbc541a77a061360a/6682ccb7-b354-4dec-977a-7ab5a1b67028/Stroll-Garden-2022-04-19_002.jpg?format=1500w");
+    margin: 30px auto;
+}
+
+p#headline {
+    position: absolute;
+    font-size: 3rem;
+    margin-left: -75px;
+    margin-top: 15px;
+    transition: margin-left 0.3s;
+}
+  
+div#imagen:hover p#headline {
+    margin-left: 115px;
+}
+
+div#imagen:hover div#info {
+    opacity:1;
+}
+
+div#info {
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    opacity:0;
+    transition: opacity 0.3s;
+    color: black;
+}
+  
+p#descripcion {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 200px;
+    transition: margin-top 0.4s;
+}
+  
+div#imagen:hover p#descripcion {
+    margin-top: 80px;
+    margin-right: 70px;
+    cursor: pointer;
+}
+
+
+
 /* MARQUEE */
 .marquee {
     color: white;
     width: 100%;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: bolder;
     padding-top: 2em;
 }
