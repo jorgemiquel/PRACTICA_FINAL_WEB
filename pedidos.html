@@ -98,7 +98,6 @@
         </button>
     
         <script>
-            // variable definitions
             let colorButtons = document.querySelectorAll(".spaceButt");
             let currentColor = "transparent";
             let pixelboard = document.querySelector(".pixelboard");
@@ -113,9 +112,7 @@
             let infobutt = document.querySelector(".infobutt");
             let disclaimer = document.querySelector(".disclaimer");
     
-            //copy helper function
             let createCopy = function(textToCopy, callback = null) {
-            //create the readonly textarea with the text in it and hide it
             let tarea = document.createElement("textarea");
             tarea.setAttribute("id", "copyarea");
             tarea.setAttribute("readonly", "readonly");
@@ -126,20 +123,16 @@
             tarea.appendChild(document.createTextNode(textToCopy));
             document.body.appendChild(tarea);
     
-            //select and copy the text in the readonly text area
             tarea.select();
             document.execCommand("copy");
     
-            //remove the element from the DOM
             document.body.removeChild(tarea);
     
-            //fire callback function if provided
             if (typeof callback === "function" && callback()) {
                 callback();
             }
             };
     
-            //recognize when mouse is pressed
             document.body.onmousedown = function() {
             mouseDown = true;
             };
@@ -147,7 +140,6 @@
             mouseDown = false;
             };
     
-            // button pressing and paintbrush loading
             for (let index = 0; index < colorButtons.length; index++) {
             const element = colorButtons[index];
             element.addEventListener("click", function() {
@@ -165,7 +157,6 @@
             });
             }
     
-            //event listeners on grid to allow paintbrush to paint
             let wireUpSquares = function() {
             let gridSquares = document.querySelectorAll(".pixelboard div");
             for (let index = 0; index < gridSquares.length; index++) {
@@ -187,7 +178,6 @@
             return n % 2 == 0;
             }
     
-            //generate the one div style block
             let generateCode = function() {
             let widthSq = parseInt(columninput.value);
             let heightSq = parseInt(rowinput.value);
@@ -238,7 +228,6 @@
             });
             };
     
-            //file input wiring
             function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -253,7 +242,6 @@
             }
             }
     
-            //mouse events for drag and drop image BG for grid
             let turnDropOff = function() {
             document.querySelector(".file-upload-input").style.display = "none";
             };
@@ -267,7 +255,6 @@
             turnDropOff();
             });
     
-            //grid creation function
             let createGrid = function(row, col, unitsize) {
             console.log("firing");
             let currentG = document.querySelectorAll(".pixelboard div");
@@ -285,7 +272,6 @@
             wireUpSquares();
             };
     
-            //listners on the grid adjustment inputs to recreate the grid
             columninput.addEventListener("input", function() {
             createGrid(rowinput.value, columninput.value, gridunitsize.value);
             });
@@ -296,14 +282,12 @@
             createGrid(rowinput.value, columninput.value, gridunitsize.value);
             });
     
-            //create initial grid on document load
             document.onload = createGrid(
             rowinput.value,
             columninput.value,
             gridunitsize.value
             );
     
-            //helper function to change color of button
             let changeColorButton = function(number, color) {
             let butt = document.getElementById("button" + number);
             butt.setAttribute("data-color", color);
@@ -313,19 +297,16 @@
             );
             };
     
-            //helper function to change color of text input
             let changeColorText = function(number, color) {
             let text = document.getElementById("textinput" + number);
             text.value = color;
             };
     
-            //helper function to change color of color input
             let changeColorPicker = function(number, color) {
             let picker = document.getElementById("colorinput" + number);
             picker.value = color;
             };
     
-            //event listeners for color inputs to change color of corresponding text input and button
             for (let index = 0; index < colorinputs.length; index++) {
             const element = colorinputs[index];
             element.addEventListener("change", function() {
@@ -335,7 +316,6 @@
             });
             }
     
-            //event listeners for text inputs to change color of corresponding color input and button
             for (let index = 0; index < textinputs.length; index++) {
             const element = textinputs[index];
             element.addEventListener("change", function() {
@@ -345,17 +325,14 @@
             });
             }
     
-            //toggle the pixelboard background based on the imgbg checkbox input
             imgbgtoggle.addEventListener("change", function() {
             pixelboard.classList.toggle("hide0");
             });
     
-            //add event listener to #gencode div to generate the css and to show the user the final single-div art!
             document.getElementById("gencode").addEventListener("click", function() {
             generateCode();
             });
     
-            //show info about pen on infobutt click
             infobutt.addEventListener("click", function() {
             disclaimer.classList.toggle("hide1");
             });

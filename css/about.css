@@ -11,6 +11,9 @@ body {
     background-color: black;
 }
 
+
+
+/* MENÚ */
 .navbar-brand {
     font-size: 2em;
     padding-left: 5%;
@@ -34,6 +37,8 @@ body {
     font-weight: bolder;
     padding-top: 2em;
 }
+
+
 
 /* FOOTER */
 footer {

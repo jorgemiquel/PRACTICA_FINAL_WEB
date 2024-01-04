@@ -12,6 +12,8 @@ body {
 }
   
 
+
+/* MENÚ */
 .navbar-brand {
   font-size: 2em;
   padding-left: 5%;
@@ -25,8 +27,9 @@ body {
   justify-content: right;
 }
 
-/* PEDIDOS */
 
+
+/* PEDIDOS */
 #Pintar {
     display: flex;
     align-items: center;
@@ -45,17 +48,15 @@ body {
     height: 100vh;
     width: 100%;
     background: #c9d6ff;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 100;
 }
   
 .disclaimer p {
     width: 600px;
 }
+
 .disclaimer p em {
     color: red;
 }
@@ -173,7 +174,7 @@ input[type="color"] {
     margin: 40px 15px 40px 15px;
 }
 
-/* sliders */
+/* SLIDERS */
 .switch {
     position: relative;
     display: inline-block;
@@ -225,7 +226,7 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
   
-  /* Rounded sliders */
+/* ROUNDED SLIDERS */
 .slider.round {
     border-radius: 34px;
 }
@@ -242,7 +243,6 @@ input:checked + .slider:before {
     background-image: none !important;
 }
 
-  
 #gencode {
     margin-top: 60px;
     width: 300px;
@@ -263,7 +263,6 @@ input:checked + .slider:before {
 }
 
 /* PINTAR */
-
 @keyframes float {
 	0% {
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -279,6 +278,9 @@ input:checked + .slider:before {
 	}
 }
 
+
+
+/* FOOTER */
 footer {
   padding-top: 5%;
 }
@@ -296,5 +298,3 @@ footer div {
   flex-direction: row;
   justify-content: space-around;
 }
-
-/* PINTAR */

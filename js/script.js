@@ -1,10 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 //PEDIDOS
-// Select color input
-// Select size input
 let height, width, color;
-// When size is submitted by the user, call makeGrid()
+
 $("#sizePicker").submit(function (evt) {
   evt.preventDefault();
   height = $("#inputHeight").val();
@@ -21,7 +19,7 @@ function makeGrid(a, b) {
       $(".table" + i).append("<td></td>");
     }
   }
-  // Your code goes here!
+
   $("td").click(function addColor() {
     color = $("#colorPicker").val();
     if ($(this).attr("style")) {
@@ -31,4 +29,4 @@ function makeGrid(a, b) {
     }
   });
 }
-//PEDIDOS
+

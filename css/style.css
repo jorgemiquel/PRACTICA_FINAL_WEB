@@ -10,6 +10,9 @@ body {
   background-color: black;
 }
 
+
+
+/* MENÚ */
 .navbar-brand {
   font-size: 2em;
   padding-left: 5%;
@@ -23,6 +26,9 @@ body {
   justify-content: right;
 }
 
+
+
+/* ENCUENTRANOS */
 #encuentranos {
   display: flex;
   justify-content: center;
@@ -34,6 +40,8 @@ body {
 }
 
 
+
+/* ANUNCIO */
 #anuncio {
   display: flex;
   justify-content: center;
@@ -83,6 +91,9 @@ body {
 	}
 }
 
+
+
+/* FOOTER */
 footer {
   padding-top: 5%;
 }
