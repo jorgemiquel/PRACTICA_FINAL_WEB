@@ -11,6 +11,12 @@ body {
     background-color: black;
 }
 
+h2 {
+    font-size: 5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
 
 
 /* MENÚ */
@@ -29,11 +35,10 @@ body {
 
 
 
-/* QUIENES SOMOS */
-.aboutus > h2 {
-    font-size: larger;
-    font-weight: bold;
+/* ABOUT US */
+p {
     text-align: center;
+    margin: 0 auto;
 }
 
 div#imagen {
