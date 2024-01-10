@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+/* MENÚ */
+.navbar-brand {
+  font-size: 2em;
+  padding-left: 5%;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 0;
+}
+
+.navbar-expand-sm .navbar-collapse {
+  justify-content: right;
+}
