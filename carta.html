@@ -1,13 +1,323 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muff Caffeine</title>
-    <link rel="icon" type="image/x-icon" href="img/icono2.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muff Caffeine</title>
+        <link rel="icon" type="image/x-icon" href="img/icono2.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/carta.css">
+        <script src="js/script.js"></script>
+    </head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/Logo.svg" alt="Muff-logo" width="200" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="carta.html">Carta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pedidos.html">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="app-container pt-40">
+
+        <div class="top-cart">
+            <div class="top-cart__info">
+                <div class="top-cart-info__goods"></div>
+                <button class="btn-check">Order
+                <span class="top-cart-info__item">
+                    <span class="red-info">0</span> €</span>
+                </button>
+            </div>
+
+        </div><!-- /.top-cart -->
+
+
+
+        <header class="header">
+            <div class="container">
+                <h1 class="header__item">Muff Shop</h1>
+            </div>
+        </header>
+
+        <div class="wrap">
+            <section class="container">
+                <div class="filter-box">
+                    <div class="select-box">
+                        <div class="select-control">
+                            <input type="radio" name="Category" data-value-category="all" id="radio-all"
+                                class="category-control" checked>
+                            <label class="radio-control" for="radio-all">All</label><br>
+                            <input type="radio" name="Category" data-value-category="muffin" id="radio-muffin"
+                                class="category-control">
+                            <label class="radio-control" for="radio-muffin">Muffin</label><br>
+                            <input type="radio" name="Category" data-value-category="mountain" id="radio-mountain"
+                                class="category-control">
+                            <label class="radio-control" for="radio-mountain">Bollería</label><br>
+                            <input type="radio" name="Category" data-value-category="drinks" id="radio-drinks"
+                                class="category-control">
+                            <label class="radio-control" for="radio-drinks">Bebidas</label><br>
+                        </div>
+
+                    </div><!-- /.select-box -->
+                    <div class="price-select-box">
+                        <input type="range" min="0" max="30" value="20" class="price-control" data-filter='price'>
+                        <span class="price-value">price to <span class="price-value__item">30</span>€</span>
+                    </div><!-- /.price-select-box -->
+                </div><!-- /filter-box-->
+
+
+
+                <div class="products-box grid-box">
+
+                    <div data-category='muffin' value="5.60" class="product-box__item">
+                        <h3 class="product-box__title">Muffin - Classic</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/cupcake.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>5.60 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='muffin' value="5.60" class="product-box__item">
+                        <h3 class="product-box__title">Muffin - Choco</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/cupcake.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>5.60 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='muffin' value="5.60" class="product-box__item">
+                        <h3 class="product-box__title">Muffin - RedVelvet</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/cupcake.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>5.60 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='muffin' value="5.60" class="product-box__item">
+                        <h3 class="product-box__title">Muffin - RedVelvet</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/cupcake.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>5.60 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='muffin' value="5.60" class="product-box__item">
+                        <h3 class="product-box__title">Muffin - RedVelvet</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/cupcake.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>5.60 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='mountain' value="3.20" class="product-box__item">
+                        <h3 class="product-box__title">Croissant</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/croissant.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>3.20 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='mountain' value="2.50" class="product-box__item">
+                        <h3 class="product-box__title">Donut</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/donut.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>2.50 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='drinks' value="2.20" class="product-box__item">
+                        <h3 class="product-box__title">Muffbatido</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="img/batido1.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>2.20 €</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    
+
+
+                </div><!-- /product-box-->
+
+            </section>
+        </div>
+
+        <footer class="bottom-footer bg-beetroot py-1">
+            <div class="container">
+            </div>
+        </footer>
+    </div><!-- /.app-container -->
+
+    <script>
+        const filter = {
+        filterAction() {
+            document.querySelectorAll(".product-box__item").forEach((item) => {
+            let categoryAtribut = item.getAttribute("data-category");
+            let priceAtribut = Number(item.getAttribute("value"));
+
+            if (
+                (filter.category() == categoryAtribut || filter.category() == "all") &&
+                (filter.price() >= priceAtribut || filter.price() == "0")
+            ) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+            });
+        },
+
+        price() {
+            let priceValue = document.querySelector(".price-value__item");
+            priceValue.innerHTML = document.querySelector("[data-filter]").value;
+
+            return document.querySelector("[data-filter]").value;
+        },
+
+        category() {
+            let radio = document.querySelectorAll(".category-control");
+            for (const item of radio) {
+            if (item.checked) {
+                return item.getAttribute("data-value-category");
+            }
+            }
+        },
+
+        checkAtributeToggle() {
+            document.querySelector(".select-control").addEventListener("click", () => {
+            document.querySelectorAll(".category-control").forEach((item) => {
+                item.removeAttribute("checked");
+            });
+
+            if (event.target.classList == "category-control") {
+                event.target.setAttribute("checked", "");
+            } else {
+                event.stopImmediatePropagation();
+            }
+            });
+        },
+        };
+
+        filter.checkAtributeToggle();
+
+        document
+        .querySelector(".select-control")
+        .addEventListener("click", filter.filterAction);
+
+        document
+        .querySelector(".price-control")
+        .addEventListener("change", filter.filterAction);
+
+        const cart = {
+        add() {
+            let div = document.querySelector(".top-cart-info__goods");
+            let element = event.target.parentNode.parentNode.cloneNode("true");
+            let elementAnimation = event.target.parentNode.parentNode;
+            elementAnimation.classList.add("animation");
+
+            element.classList = "product-box__item--small";
+            element.removeAttribute("style");
+            element.querySelector(".product-box__btn").innerHTML = "X";
+            element.querySelector(".product-box__btn").classList =
+            "product-box__btn--delete";
+
+            document.querySelector(".top-cart").style.bottom = 0 + "px";
+            div.appendChild(element);
+            cart.price();
+
+            setTimeout(() => {
+            elementAnimation.classList.remove("animation");
+            }, 1000);
+        },
+
+        delete() {
+            if (event.target.classList == "product-box__btn--delete") {
+            let mainElement = event.target.parentNode.parentNode
+            mainElement.classList.add('delete')
+            setTimeout(() => {
+                mainElement.remove();
+                cart.price();
+            }, 900);
+            }
+        },
+
+        price() {
+            let priceValue = 0;
+            document.querySelectorAll(".product-box__item--small").forEach((item) => {
+            priceValue += Number(item.getAttribute("value"));
+            });
+            document.querySelector(".red-info").innerHTML = priceValue;
+
+            if (priceValue === 0) {
+            document.querySelector(".top-cart").style.bottom = -120 + "px";
+            }
+        },
+        };
+
+        document
+        .querySelectorAll(".product-box__btn")
+        .forEach((item) => item.addEventListener("click", cart.add));
+
+        document
+        .querySelector(".top-cart-info__goods")
+        .addEventListener("click", cart.delete);
+
+    </script>
+    
+    <script src="js/filter.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/test.js"></script>
+</body>
+
+<footer>
+    <div>
+      <img class="logo-footer" src="img/Logo.png" alt="">
+      <div>
+        <ul>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>Facebook</li>
+        </ul>
+      </div>
+    </div>
+</footer>
 
 </html>

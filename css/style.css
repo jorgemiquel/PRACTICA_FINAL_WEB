@@ -26,23 +26,42 @@ body {
   justify-content: right;
 }
 
-
-
-/* ENCUENTRANOS */
-#encuentranos {
+section {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-#encuentranos img {
-  width: 30%;
-  padding: 20px 0;
+section > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 
+section h1 {
+  font-size: 5em;
+  font-weight: bold;
+}
 
+/* ENCUENTRANOS */
+
+.parallax {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/fachada.png);
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  
+}
 
 /* ANUNCIO */
 #anuncio {
+  padding-top: 5%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
