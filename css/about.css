@@ -97,7 +97,6 @@ div#imagen:hover p#descripcion {
     width: 100%;
     font-size: 2em;
     font-weight: bolder;
-    padding-top: 2em;
 }
 
 
@@ -126,6 +125,7 @@ div#imagen:hover p#descripcion {
     filter: grayscale(100%);
     transition-duration: 0.5s;
     width: 100%;
+    border-radius: 50px;
 }
 
 #galeria > figure > img:hover {
