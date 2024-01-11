@@ -28,6 +28,22 @@ body {
 
 section {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+section h1 {
+  font-size: 5em;
+  font-weight: bold;
 }
 
 /* ENCUENTRANOS */
@@ -38,10 +54,8 @@ section {
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
+  
 }
 
 /* ANUNCIO */
