@@ -26,59 +26,28 @@ body {
   justify-content: right;
 }
 
-
-main {
+section {
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
 }
 
 /* ENCUENTRANOS */
-section {
-  transform-style: preserve-3d;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section h1 {
-  color: white;
-  text-align: center;
-  font-size: 4rem;
-}
 
 .parallax {
   height: 60vh;
-}
-
-.parallax h1 {
-  width: 60%;
-  font-size: 4rem;
-}
-
-.parallax::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transform: translateZ(-1px); scale:(1.5);
-  background-size: 100%;
-  z-index: -1;
-}
-
-.bg::after {
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/fachada.png);
+  background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-
 
 /* ANUNCIO */
 #anuncio {
+  padding-top: 5%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
