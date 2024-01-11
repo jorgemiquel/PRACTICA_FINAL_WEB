@@ -8,351 +8,217 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/pedidos.css">
         <script src="js/script.js"></script>
+        <script src="https://kit.fontawesome.com/44380579aa.js" crossorigin="anonymous"></script>
     </head>
 
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/Logo.svg" alt="Muff-logo" width="200" height="60">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="pedidos.html">Pedidos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-          </ul>
+    <body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/Logo.svg" alt="Muff-logo" width="200" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="pedidos.html">Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <div class="personaliza">
+      <h1>Personaliza tu etiqueta:</h1>
       </div>
-    </nav>
-
-    <h1>Personaliza tu etiqueta:</h1>
-
-    <!-- PARA PINTAR -->
-    <section id="Pintar">
-        <div class="disclaimer hide1">
-            <p>Click a color button, paint away. Make sure to change the grid size and unit size before painting, <em>changing these values mid-painting will re-create the artboard and your progress will be lost.</em> If you want to use an image as a template, drag and drop the image onto your artboard, you should then be able to toggle it on and off. When you click 'generate div', a single div is created with a css block applied to it to render your artwork. It's also copied to your clipboard just in case you want to use it elsewhere.</p>
-        </div>
-        <div class="gridsize">
-            <div>
-              <label>Columns:</label>
-              <input id="columninput" type="text" value="40">
+      <div class="wrapper">
+        <div class="options">
+          <div class="opt-wrapper">
+            <div class="slider">
+              <label for="width-range">Anchura</label>
+              <input type="range" id="width-range" min="1" max="35" />
+              <span id="width-value">00</span>
             </div>
-            <div>
-              <label>Rows:</label>
-              <input id="rowinput" type="text" value="30">
+            <div class="slider">
+              <label for="height-range">Grid Height</label>
+              <input type="range" id="height-range" min="1" max="35" />
+              <span id="height-value">00</span>
             </div>
-            <div>
-              <label>Grid Unit Size (in pixels):</label>
-              <input id="gridunitsize" type="text" value="12">
-            </div>
-            <div>
-              Show Background-Image: &nbsp;
-              <label class="switch">
-                <input id="imgbgtoggle" type="checkbox" disabled>
-                <span class="slider round"></span>
-              </label>
-            </div>
-          
           </div>
-          <div class="pcard">
-            <div class="pixelboard">
-              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" style="display:none;" />
-            </div>
-            <div id="space-invader"></div>
+          <div class="opt-wrapper">
+            <button id="submit-grid">Crear Retícula</button>
+            <button id="clear-grid">Borrar Retícula</button>
+            <input type="color" id="color-input" />
+            <button id="erase-btn">Borrador</button>
+            <button id="paint-btn">Pintar</button>
           </div>
-          
-          <div class="button-container">
-            <div class="colorbutton">
-              <button id="button1" class="spaceButt" data-color="#000" style="background-color: #000; box-shadow: -5px 4px 0px #000, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput1" value="#000000" /><input id="colorinput1" type="color" value="#000000" /></div>
-            </div>
-            <div class="colorbutton">
-              <button id="button2" class="spaceButt" data-color="#FFF" style="background-color: #FFF; box-shadow: -5px 4px 0px #FFF, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput2" value="#FFFFFF" /><input id="colorinput2" type="color" value="#FFFFFF" /></div>
-            </div>
-            <div class="colorbutton">
-              <button id="button3" class="spaceButt" data-color="#F44336" style="background-color: #F44336; box-shadow: -5px 4px 0px #F44336, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput3" value="#F44336" /><input id="colorinput3" type="color" value="#F44336" /></div>
-            </div>
-            <div class="colorbutton">
-              <button id="button4" class="spaceButt" data-color="#FDD835" style="background-color: #FDD835; box-shadow: -5px 4px 0px #FDD835, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput4" value="#FDD835" /><input id="colorinput4" type="color" value="#FDD835" /></div>
-            </div>
-            <div class="colorbutton">
-              <button id="button5" class="spaceButt" data-color="#1E88E5" style="background-color: #1E88E5; box-shadow: -5px 4px 0px #1E88E5, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput5" value="#1E88E5" /><input id="colorinput5" type="color" value="#1E88E5" /></div>
-            </div>
-            <div class="colorbutton">
-              <button id="button6" class="spaceButt" data-color="#43b87d" style="background-color: #43b87d; box-shadow: -5px 4px 0px #43b87d, -6px 5px 0px #000;"></button>
-              <div><input type="text" id="textinput6" value="#43b87d" /><input id="colorinput6" type="color" value="#43b87d" /></div>
-            </div>
         </div>
-        <button id='gencode'>
-            GENERATE DIV.
-        </button>
-    
-        <script>
-            let colorButtons = document.querySelectorAll(".spaceButt");
-            let currentColor = "transparent";
-            let pixelboard = document.querySelector(".pixelboard");
-            let columninput = document.getElementById("columninput");
-            let rowinput = document.getElementById("rowinput");
-            let gridunitsize = document.getElementById("gridunitsize");
-            let imgbgtoggle = document.getElementById("imgbgtoggle");
-            let mouseDown = false;
-            let buttons = document.querySelectorAll(".colorbutton button");
-            let textinputs = document.querySelectorAll('.colorbutton input[type="text"]');
-            let colorinputs = document.querySelectorAll('.colorbutton input[type="color"]');
-            let infobutt = document.querySelector(".infobutt");
-            let disclaimer = document.querySelector(".disclaimer");
-    
-            let createCopy = function(textToCopy, callback = null) {
-            let tarea = document.createElement("textarea");
-            tarea.setAttribute("id", "copyarea");
-            tarea.setAttribute("readonly", "readonly");
-            tarea.setAttribute(
-                "style",
-                "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-            );
-            tarea.appendChild(document.createTextNode(textToCopy));
-            document.body.appendChild(tarea);
-    
-            tarea.select();
-            document.execCommand("copy");
-    
-            document.body.removeChild(tarea);
-    
-            if (typeof callback === "function" && callback()) {
-                callback();
+        <div class="container"></div>
+      </div>
+      <!-- Script -->
+      <script src="script.js"></script>
+
+      </body>
+
+    <div class="wrap">
+      <a href="#" class="button">Hover Me!</a>
+  </div>
+
+
+<script>//Initial references
+  let container = document.querySelector(".container");
+  let gridButton = document.getElementById("submit-grid");
+  let clearGridButton = document.getElementById("clear-grid");
+  let gridWidth = document.getElementById("width-range");
+  let gridHeight = document.getElementById("height-range");
+  let colorButton = document.getElementById("color-input");
+  let eraseBtn = document.getElementById("erase-btn");
+  let paintBtn = document.getElementById("paint-btn");
+  let widthValue = document.getElementById("width-value");
+  let heightValue = document.getElementById("height-value");
+  
+  
+  
+  //Events object
+  let events = {
+      mouse: {
+        down: "mousedown",
+        move: "mousemove",
+        up: "mouseup",
+      },
+      touch: {
+        down: "touchstart",
+        move: "touchmove",
+        up: "touchend",
+      },
+    };
+    let deviceType = "";
+    //Initially draw and erase would be false
+    let draw = false;
+    let erase = false;
+    //Detect touch device
+    const isTouchDevice = () => {
+      try {
+        //We try to create TouchEvent(it would fail for desktops and throw error)
+        document.createEvent("TouchEvent");
+        deviceType = "touch";
+        return true;
+      } catch (e) {
+        deviceType = "mouse";
+        return false;
+      }
+    };
+    isTouchDevice();
+    //Create Grid
+    gridButton.addEventListener("click", () => {
+      //Initially clear the grid (old grids cleared)
+      container.innerHTML = "";
+      //count variable for generating unique ids
+      let count = 0;
+      //loop for creating rows
+      for (let i = 0; i < gridHeight.value; i++) {
+        //incrementing count by 2
+        count += 2;
+        //Create row div
+        let div = document.createElement("div");
+        div.classList.add("gridRow");
+        //Create Columns
+        for (let j = 0; j < gridWidth.value; j++) {
+          count += 2;
+          let col = document.createElement("div");
+          col.classList.add("gridCol");
+          /* We need unique ids for all columns (for touch screen specifically) */
+          col.setAttribute("id", `gridCol${count}`);
+          /*
+          For eg if deviceType = "mouse"
+          the statement for the event would be events[mouse].down which equals to mousedown
+          if deviceType="touch"
+          the statement for event would be events[touch].down which equals to touchstart
+           */
+          col.addEventListener(events[deviceType].down, () => {
+            //user starts drawing
+            draw = true;
+            //if erase = true then background = transparent else color
+            if (erase) {
+              col.style.backgroundColor = "transparent";
+            } else {
+              col.style.backgroundColor = colorButton.value;
             }
-            };
-    
-            document.body.onmousedown = function() {
-            mouseDown = true;
-            };
-            document.body.onmouseup = function() {
-            mouseDown = false;
-            };
-    
-            for (let index = 0; index < colorButtons.length; index++) {
-            const element = colorButtons[index];
-            element.addEventListener("click", function() {
-                let pressedButt = document.querySelector(".pressed");
-                if (pressedButt) {
-                pressedButt.classList.remove("pressed");
-                }
-    
-                if (this == pressedButt) {
-                currentColor = "transparent";
-                } else {
-                this.classList.add("pressed");
-                currentColor = this.dataset.color;
-                }
-            });
-            }
-    
-            let wireUpSquares = function() {
-            let gridSquares = document.querySelectorAll(".pixelboard div");
-            for (let index = 0; index < gridSquares.length; index++) {
-                const element = gridSquares[index];
-                element.addEventListener("mousedown", function(e) {
-                this.style.backgroundColor = currentColor;
-                e.preventDefault();
-                });
-                element.addEventListener("mouseenter", function(e) {
-                if (mouseDown) {
-                    this.style.backgroundColor = currentColor;
-                }
-                e.preventDefault();
-                });
-            }
-            };
-    
-            function isEven(n) {
-            return n % 2 == 0;
-            }
-    
-            let generateCode = function() {
-            let widthSq = parseInt(columninput.value);
-            let heightSq = parseInt(rowinput.value);
-            let sqMeasW = isEven(widthSq) ? widthSq / 2 : (widthSq - 1) / 2;
-            let sqMeasH = isEven(heightSq) ? heightSq / 2 : (heightSq - 1) / 2;
-            let sqPadW = isEven(widthSq) ? sqMeasW - 1 : sqMeasW;
-            let sqPadH = isEven(heightSq) ? sqMeasH - 1 : sqMeasH;
-            let backString = "";
-            let hOff = -(sqPadW + 1);
-            let vOff = -(sqMeasH + 1);
-            let styleString = `content: '';
-                display: block;
-                font-size: ${gridunitsize.value}px;
-                width: 1em;
-                height: 1em;
-                margin: ${sqMeasH}em ${sqMeasW}em ${sqPadH}em ${sqPadW}em;
-                box-shadow:`;
-    
-            for (let index = 0; index < widthSq * heightSq; index++) {
-                let dBG = document.querySelector(
-                ".pixelboard div:nth-child(" + (index + 2) + ")"
-                ).style.backgroundColor;
-                sqColor = dBG ? dBG : "transparent";
-                let row = Math.ceil((index + 1) / widthSq);
-                let col = ((index + 1) / widthSq - (row - 1)) / (1 / widthSq);
-                let vEm = Math.round(row + vOff);
-                let hEm = Math.round(col + hOff);
-                if (vEm === 0 && hEm === 0) {
-                backString = `background-color: ${sqColor};`;
-                } else if (sqColor !== "transparent") {
-                styleString += `${hEm}em ${vEm}em 0 0 ${sqColor},`;
-                }
-            }
-            var finalStyle = backString + styleString.replace(/.$/, ";");
-            document.getElementById("space-invader").setAttribute("style", finalStyle);
-            pixelboard.style.display = "none";
-            document.querySelector(".pcard").style.boxShadow = "none";
-            document.querySelector(".pcard").style.borderRadius = "0px";
-            let knobs = document.querySelectorAll(".knob");
-            for (let index = 0; index < knobs.length; index++) {
-                const element = knobs[index];
-                element.style.display = "none";
-            }
-            createCopy(finalStyle, function() {
-                alert(
-                "css has been copied to your clipboard... go apply it to an empty div :)"
-                );
-            });
-            };
-    
-            function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                pixelboard.style.backgroundImage = "url('" + e.target.result + "')";
-                imgbgtoggle.disabled = false;
-                imgbgtoggle.checked = true;
-                pixelboard.classList.remove("hide0");
-                };
-    
-                reader.readAsDataURL(input.files[0]);
-            }
-            }
-    
-            let turnDropOff = function() {
-            document.querySelector(".file-upload-input").style.display = "none";
-            };
-            pixelboard.addEventListener("dragenter", function(e) {
-            document.querySelector(".file-upload-input").style.display = "inherit";
-            });
-            pixelboard.addEventListener("drop", function(e) {
-            turnDropOff();
-            });
-            document.body.addEventListener("mouseleave", function(e) {
-            turnDropOff();
-            });
-    
-            let createGrid = function(row, col, unitsize) {
-            console.log("firing");
-            let currentG = document.querySelectorAll(".pixelboard div");
-            for (let index = 0; index < currentG.length; index++) {
-                const element = currentG[index];
-                element.parentNode.removeChild(element);
-            }
-            for (let index = 0; index < row * col; index++) {
-                var emptyDiv = document.createElement("div");
-                pixelboard.appendChild(emptyDiv);
-            }
-    
-            pixelboard.style.gridTemplateColumns = `repeat(${col}, ${unitsize}px)`;
-            pixelboard.style.gridTemplateRows = `repeat(${row}, ${unitsize}px)`;
-            wireUpSquares();
-            };
-    
-            columninput.addEventListener("input", function() {
-            createGrid(rowinput.value, columninput.value, gridunitsize.value);
-            });
-            rowinput.addEventListener("input", function() {
-            createGrid(rowinput.value, columninput.value, gridunitsize.value);
-            });
-            gridunitsize.addEventListener("input", function() {
-            createGrid(rowinput.value, columninput.value, gridunitsize.value);
-            });
-    
-            document.onload = createGrid(
-            rowinput.value,
-            columninput.value,
-            gridunitsize.value
-            );
-    
-            let changeColorButton = function(number, color) {
-            let butt = document.getElementById("button" + number);
-            butt.setAttribute("data-color", color);
-            butt.setAttribute(
-                "style",
-                `background-color: ${color}; box-shadow: -5px 4px 0px ${color}, -6px 5px 0px #000;`
-            );
-            };
-    
-            let changeColorText = function(number, color) {
-            let text = document.getElementById("textinput" + number);
-            text.value = color;
-            };
-    
-            let changeColorPicker = function(number, color) {
-            let picker = document.getElementById("colorinput" + number);
-            picker.value = color;
-            };
-    
-            for (let index = 0; index < colorinputs.length; index++) {
-            const element = colorinputs[index];
-            element.addEventListener("change", function() {
-                changeColorButton(index + 1, this.value);
-                changeColorText(index + 1, this.value);
-                currentColor = document.querySelector(".pressed").dataset.color;
-            });
-            }
-    
-            for (let index = 0; index < textinputs.length; index++) {
-            const element = textinputs[index];
-            element.addEventListener("change", function() {
-                changeColorButton(index + 1, this.value);
-                changeColorPicker(index + 1, this.value);
-                currentColor = document.querySelector(".pressed").dataset.color;
-            });
-            }
-    
-            imgbgtoggle.addEventListener("change", function() {
-            pixelboard.classList.toggle("hide0");
-            });
-    
-            document.getElementById("gencode").addEventListener("click", function() {
-            generateCode();
-            });
-    
-            infobutt.addEventListener("click", function() {
-            disclaimer.classList.toggle("hide1");
-            });
-            disclaimer.addEventListener("click", function() {
-            disclaimer.classList.toggle("hide1");
-            });
-        </script>
-    </section>
-</body>
+          });
+          col.addEventListener(events[deviceType].move, (e) => {
+            /* elementFromPoint returns the element at x,y position of mouse */
+            let elementId = document.elementFromPoint(
+              !isTouchDevice() ? e.clientX : e.touches[0].clientX,
+              !isTouchDevice() ? e.clientY : e.touches[0].clientY
+            ).id;
+            //checker
+            checker(elementId);
+          });
+          //Stop drawing
+          col.addEventListener(events[deviceType].up, () => {
+            draw = false;
+          });
+          //append columns
+          div.appendChild(col);
+        }
+        //append grid to container
+        container.appendChild(div);
+      }
+    });
+    function checker(elementId) {
+      let gridColumns = document.querySelectorAll(".gridCol");
+      //loop through all boxes
+      gridColumns.forEach((element) => {
+        //if id matches then color
+        if (elementId == element.id) {
+          if (draw && !erase) {
+            element.style.backgroundColor = colorButton.value;
+          } else if (draw && erase) {
+            element.style.backgroundColor = "transparent";
+          }
+        }
+      });
+    }
+    //Clear Grid
+    clearGridButton.addEventListener("click", () => {
+      container.innerHTML = "";
+    });
+    //Erase Button
+    eraseBtn.addEventListener("click", () => {
+      erase = true;
+    });
+    //Paint button
+    paintBtn.addEventListener("click", () => {
+      erase = false;
+    });
+    //Display grid width and height
+    gridWidth.addEventListener("input", () => {
+      widthValue.innerHTML =
+        gridWidth.value < 9 ? `0${gridWidth.value}` : gridWidth.value;
+    });
+    gridHeight.addEventListener("input", () => {
+      heightValue.innerHTML =
+        gridHeight.value < 9 ? `0${gridHeight.value}` : gridHeight.value;
+    });
+    window.onload = () => {
+      gridWidth.value = 0;
+      gridHeight.value = 0;
+    };</script>
+
 
 <footer>
     <div>
       <img class="logo-footer" src="img/Logo.png" alt="">
       <div>
         <ul>
-          <li>Instagram</li>
-          <li>Twitter</li>
-          <li>Facebook</li>
+          <a><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
+          <a><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+          <a><i class="fa-brands fa-tiktok fa-2xl" style="color: #ffffff;"></i></a>
         </ul>
       </div>
     </div>
