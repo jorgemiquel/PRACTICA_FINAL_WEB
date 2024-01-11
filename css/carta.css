@@ -577,8 +577,6 @@ footer div {
   }
 }
 
-/* FOOTER */
-
 @keyframes float {
 	0% {
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -595,21 +593,27 @@ footer div {
 }
 
 
+
+/* FOOTER */
 footer {
-    padding-top: 5%;
-    padding-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
-  
+
 .logo-footer {
-    padding-left: 5%;
-    height: 60px;
-    transform: translatey(0px);
-    animation: float 6s ease-in-out infinite;
+  padding-left: 5%;
+  height: 60px;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 }
-  
+
 footer div {
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer a {
+  padding: 20px;
 }
