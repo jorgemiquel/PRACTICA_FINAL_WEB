@@ -157,24 +157,29 @@ div#imagen:hover p#descripcion {
 	}
 }
 
+
 footer {
-    padding-top: 5%;
-}
-  
-.logo-footer {
-    padding-left: 5%;
-    height: 60px;
-      transform: translatey(0px);
-      animation: float 6s ease-in-out infinite;
-}
-  
-footer div {
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
+.logo-footer {
+  padding-left: 5%;
+  height: 60px;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+footer div {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer a {
+  padding: 20px;
+}
 
 
 /* media ================================================================================ */

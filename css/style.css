@@ -60,6 +60,21 @@ section p {
   font-size: 2em;
 }
 
+.etiqueta {
+  height: 60vh;
+  font-size: 2em;
+}
+
+.btn {
+  --bs-btn-font-size: 2rem;
+}
+
+.btn-primary {
+  --bs-btn-bg: #fff200;
+  --bs-btn-border-color: #fff200;
+  --bs-btn-color: #000;
+}
+
 .headervid {
   overflow: hidden;
 }
@@ -181,6 +196,7 @@ p:hover {
 /* FOOTER */
 footer {
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .logo-footer {
@@ -195,6 +211,10 @@ footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+footer a {
+  padding: 20px;
 }
 
 

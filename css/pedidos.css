@@ -23,32 +23,12 @@
     
 }
 
-/* FOOTER */
-footer {
-  padding-top: 5%;
-}
-
-.logo-footer {
-  padding-left: 5%;
-  height: 60px;
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
-}
-
-footer div {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Pixelify Sans', sans-serif;
-  }
+}
   body {
     background-color: #000000;
   }
@@ -148,5 +128,50 @@ a.button {
 a.button:hover {
 	color: black;
 	box-shadow: #fff200 0 0px 0px 40px inset;
+}
+
+/* FOOTER */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.logo-footer {
+  padding-left: 5%;
+  height: 60px;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+footer div {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer a {
+  padding: 20px;
+}
+
+dl, ol, ul {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
