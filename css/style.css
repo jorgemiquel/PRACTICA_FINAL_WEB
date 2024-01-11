@@ -29,8 +29,12 @@ body {
 }
 
 section {
+  padding-right: 5%;
+  padding-left: 5%;
   height: 100vh;
   display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: white;
@@ -44,9 +48,62 @@ section > div {
 }
 
 section h1 {
+  padding-bottom: 2%;
   font-size: 5em;
   font-weight: bold;
 }
+
+section p {
+  padding: 2%;
+  border: solid white 2px;
+  width: fit-content;
+  font-size: 2em;
+}
+
+.headervid {
+  overflow: hidden;
+}
+
+.back-video {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.mufcon {
+  margin: 2%;
+  width: 20%;
+  animation: float 3s ease-in-out infinite;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p:hover {
+  background-color: #fff200;
+  color: black;
+  animation: float 2s ease-in-out infinite;
+}
+
+@media (min-aspect-ratio:16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9){
+  .back-video{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
 
 /* ENCUENTRANOS */
 
@@ -138,4 +195,34 @@ footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .mufcon {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mufcon {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  section h1 {
+    font-size: 2.3em;
+  }
+
+  .mufcon {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  .mufcon {
+    width: 40%;
+  }
 }
