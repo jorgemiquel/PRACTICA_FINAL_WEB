@@ -519,6 +519,27 @@ input[type="range"]::-webkit-slider-runnable-track {
   margin-bottom: 200px;
 }
 
+
+/* FOOTER */
+footer {
+  padding-top: none;
+  height: 20vh;
+}
+
+.logo-footer {
+  padding-left: 5%;
+  height: 60px;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+footer div {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 /* media ================================================================================ */
 
 @media (max-width: 768px) {
