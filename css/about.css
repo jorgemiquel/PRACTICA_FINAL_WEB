@@ -39,6 +39,8 @@ h2 {
 p {
     text-align: center;
     margin: 0 auto;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 div#imagen {
