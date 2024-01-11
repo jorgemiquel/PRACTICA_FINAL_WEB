@@ -42,8 +42,8 @@ p {
 }
 
 div#imagen {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     background-size: cover;
     background-image: url("https://images.squarespace-cdn.com/content/v1/63b8648fbc541a77a061360a/6682ccb7-b354-4dec-977a-7ab5a1b67028/Stroll-Garden-2022-04-19_002.jpg?format=1500w");
     margin: 30px auto;
@@ -58,7 +58,7 @@ p#headline {
 }
   
 div#imagen:hover p#headline {
-    margin-left: 115px;
+    margin-left: 80px;
 }
 
 div#imagen:hover div#info {
@@ -119,3 +119,29 @@ footer div {
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+
+/* media ================================================================================ */
+@media (max-width: 768px) {
+    div#imagen {
+        width: 279px;
+        height: 198px;
+    }
+
+    h2 {
+        font-size: 2.45em;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    div#imagen:hover p#headline {
+        margin-left: 18px;
+    }
+  }
+  
+@media (max-width: 576px) {
+
+  }
