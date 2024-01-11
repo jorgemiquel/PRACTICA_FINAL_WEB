@@ -29,4 +29,3 @@ function makeGrid(a, b) {
     }
   });
 }
-
