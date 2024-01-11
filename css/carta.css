@@ -117,7 +117,8 @@ h3 {
 
 .product-box__img {
   overflow: hidden;
-
+    display: flex;
+    justify-content: center;
   margin-top: auto;
   margin-bottom: 1rem;
 }
